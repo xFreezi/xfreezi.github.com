@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+	body {
+	background-color: lightblue;
+}
+
+	h1 {
+	font-family: verdana;
+	text-align: center;
+	padding-top: 50px;
+	
+}
+h3 {
+	font-family: verdana;
+	text-align: center;
+	padding-top: 10px;
+	
+}
+	.middle {
+	display: block;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+    </style>
+        <meta charset="utf-8">
+        <title>RFID Door Lock</title>
+    </head>
+    <body>
+   <h1>
+	THE TREATMENT FOR BORED-ITIS IS DOING SOMETHING EVEN MORE BORING
+   </h1>
+   <img src="images/boring.JPG" class="middle">
+   <h3>
+   CONVENIENTLY, THERE IS A BORING BLOG RIGHT HERE!!
+   </h3>
+    </body>
+</html>

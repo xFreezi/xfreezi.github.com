@@ -1,56 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <style>
-    body {
-        font-family:verdana;
-    }
-	.info { 
-		background-color:black;
-	}
-	.info {
-		color: blue;
-	}
-	
-    .heading { 
-		background-color:black;
-	}
-	.heading {
-		color: blue;
-    }
-    .title {
-		color:red; 
-	}
-	.title {
-	background-color: black;
-	}
-	.middle {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width:50%
+<html lang="en">
+<head>
+<title>Test</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
 }
-	div {
-		background-color: black;
-		color: blue;
-		width: 800px;
-		height: 450px;
-		padding-top:50px;
-		padding-left:80px;
-		padding-bottom:50px;
-		padding-right: 30px;
-		overflow: scroll;
-		font-size: 17px;
-	}
-	.topnav {
+
+body {
+	margin: 0;
+	font-family: verdana;
+	background-color: #FFE077;
+}
+
+.header {
+  background-color: #FFE077;
+  text-align: center;
+  height: 10px;
+}
+
+
+.topnav {
 		height: 40px;
-		padding-top:20px;
+		padding-top:10px;
 		padding-left:0px;
-		padding-bottom:0px;
+		padding-bottom:10px;
 		padding-right: 0px;
 		width: 100%;
 		overflow: hidden;
-		background-color: black;
+		background-color: #FFC400;
 		position: -webkit-sticky;
 		position: sticky;
 		top: 0px;
@@ -58,7 +38,7 @@
 
 	.topnav a {
 		float: down;
-		color: blue;
+		color: black;
 		text-align: center;
 		padding: 14px 16px;
 		text-decoration: none;
@@ -67,48 +47,101 @@
 
 	.topnav a:hover {
 		background-color: white;
-		color: blue;
+		color: #FFC400;
 }
 
-	.topnav a.active {
-		background-color: blue;
-		color: white;
+.column {
+  float: left;
+  padding: 10px;
 }
-	.box {
-		width: 92.5%;
-		height: 100%;
-		background-color: blue;
-		padding-top: 0px;
-		padding-bottom: 0px;
-		padding-left: 0px
-		padding-right: 0px;
+
+
+.column.side {
+  width: 25%;
+}
+
+.column.middle {
+  width: 50%;
+  height: 100%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+.box {
+		background-color: #9FFFF3;
+		color: black;
+		width: 100%;
+		height: 100%
+		padding-top:50px;
+		padding-left:10px;
+		padding-bottom: 10px;
+		padding-right: 10px;
+
 		overflow: hidden;
+		font-size: 17px;
+	}	
+	
+.scroll-box {
+		background-color: #9FFFF3;
+		color: black;
+		width: 100%;
+		height: 500px;
+		padding-top: 10px;
+		padding-left: 10px;
+		padding-bottom: 0px;
+		padding-right: 0px;
+		overflow: scroll;
+		overflow-x: hidden;
+		font-size: 16px;
 }
-    </style>
-        <meta charset="utf-8">
-        <title>RFID Door Lock</title>
-		<link rel="shortcut icon" src="images/html" href="lock.html">
-    </head>
-    <body>
-    <div class="topnav">
-  <a class="active" href="#home">Home</a>
+.image {
+	width: 49.5%;
+}
+
+	
+</style>
+</head>
+<body>
+
+<div class="header">
+</div>
+
+<div class="topnav"><strong>
+  <a href="#home">Intro</a>
   <a href="#materials">Materials Required</a>
-  <a href="#problem-solved">Problems it can Solve</a>
+  <a href="#problem-solved">Problems it can solve</a>
   <a href="#arduino-code">Code</a>
   <a href="#fritzing-schematic">Schematic</a>
+  </strong>
 </div>
-        <h1 class="title">Welcome to ....</h1>
+
+<div class="row">
+  <div class="column side">
+<iframe src="html/ad1" height="1000" width="200"></iframe>
+  </div>
+  
+  <div class="column middle">
+  
+	<h1 class="title">Welcome to ....</h1>
         <h2 class="title"> Simon and Kaisen's Arduino page!!</h2>
-		<img class= "middle" src="images/cloud8.PNG">
+		<img class= "middle" src="images/cloud8.png">
 		<div class="box">
-        <h1 class="title"> <u> RFID door lock (brief plan) </u></h1>
+	 <h1 class="title"> <u> RFID door lock (brief plan) </u></h1>
         <h2 class="heading" id= "home"> Intro:</h2>
         <p class="info" id="home" font-weight="17px"> One day, Simon(who is a poop) was in China sleeping while Kaisen(who also happens to be a poop) went to <strong><em>STEM</em></strong> (SUPER-TECHNOLOGICALSCIENTIFIC-EDIBLE-MEAT) class. He had to make a project with the guy (a poop) 9,582km (very close) away. Together, they would eventually talk on Discord (for like 9 million hours) and decide to make a glorious RFID (ravioli-free-iguana-decapitation) door lock. It is a mechanism that locks a door and can only be opened by a tag (with a specific UID) stored in the sensor. Kaisen thought of it (he has an IQ of <strong>9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999</strong>) because Simon knows nothing about Arduino. It includes the flashy RFID sensor (totally OG name) and a bunch of generic Arduino stuff. The thing that took the longest in our project to make was the <strong>Cloud 8</strong> (TOTALLY not stolen from the Cloud 9 eSports team) symbol because it is majestic. 
 </p>
 </div>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS33AOLaaGyd-TyDRgOdMvKCtpFzU7MgNmLO7G-32PyAeVs1bo9" width="500">
-<img src="https://store-cdn.arduino.cc/usa/catalog/product/cache/1/small_image/560x/54a39ccf936f55cfda55ed856d76c198/a/0/a000066_featured_4.jpg" width="500">
-<iframe src="https://thatboringblog.com/" height="500" width="100%"></iframe>
+<img class= "image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS33AOLaaGyd-TyDRgOdMvKCtpFzU7MgNmLO7G-32PyAeVs1bo9">
+<img class= "image" src="https://store-cdn.arduino.cc/usa/catalog/product/cache/1/small_image/560x/54a39ccf936f55cfda55ed856d76c198/a/0/a000066_featured_4.jpg" height= "251.9">
 <div class="box">
 <h2 class="title" id="materials"> Materials required </h2>
 <ul class="info">
@@ -122,30 +155,29 @@
     <li> Soldering Iron</li>
     <li> Buzzer (maybe)</li>
 </ul>
-</div>
-<img src="https://www.robomart.com/image/cache/catalog/RM0648/rc522-rfid-rf-ic-card-sensor-module-to-send-s50-fudan-card-rf-module-keychain-for-arduino-raspberry-pi-robotics-arduino-accessories-rm0648-by-robomart-a17060-500x500.jpg">
-<img src="https://cdn.instructables.com/FGF/QB07/HX7P7I3J/FGFQB07HX7P7I3J.LARGE.jpg">
-<div class="box">
-<h2 class="title">Sensors used
-</h2>
-<p>
-<ul class="info">
+	<h2 class="title">Sensors used</h2>
+	<p>
+	<ul class="info">
     <li> RFID Sensor </li>
 </ul>
-<h2 class="title" id="problem-solved">What problem can it solve?</h2>
+</div>
+<img class= "image" src="https://www.robomart.com/image/cache/catalog/RM0648/rc522-rfid-rf-ic-card-sensor-module-to-send-s50-fudan-card-rf-module-keychain-for-arduino-raspberry-pi-robotics-arduino-accessories-rm0648-by-robomart-a17060-500x500.jpg">
+<img class= "image" src="https://cdn.instructables.com/FGF/QB07/HX7P7I3J/FGFQB07HX7P7I3J.LARGE.jpg" height= "324">
 
+<div class="box">
+<h2 class="title" id="problem-solved">What problem can it solve?</h2>
 <p>
 <ul class="info">
     <li>Security in your house (kinda like a hotel room)</li>
     <li>Instead of looking through your keys,  you use a tag or card (convenience)</li></ul>
 <p><li class="info">Imagine this: you go to your friend's house for a sleepover and forget to lock the door. A robber comes and steals your food. Then, you get home, and since you have no food, starve to death. If you had a RFID lock, the robber wouldn't be able to get into your house and you and your food would be fine because our automatic lock locks by itself!</p></li>
-</div>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxNMYHlg5yz0yEgTsTVD9iK6hONW5NPDoqTgbga2yldP6fyGtdGw" height="500">
-<img src="https://s.globalsources.com/MAGAZINE/SECURITY/1602/IMAGES/AC_1602_SP_AC_NP23.jpg" height="500">
+   </div>
+   <img class= "image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxNMYHlg5yz0yEgTsTVD9iK6hONW5NPDoqTgbga2yldP6fyGtdGw"height= "324">
+<img class= "image" src="https://s.globalsources.com/MAGAZINE/SECURITY/1602/IMAGES/AC_1602_SP_AC_NP23.jpg">
 <h2 class="title" id="arduino-code"> 
 	Our code:
 </h2>
-<p class="info"> <div><xmp>
+<p class="info"> <strong><div class= "scroll-box"><xmp>
 #include <SPI.h> 
 #include <MFRC522.h> 
 #include <Servo.h> 
@@ -191,10 +223,10 @@ void loop()
   byte letter;
   for (byte i = 0; i < mfrc522.uid.size; i++) 
   {
-     Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
-     Serial.print(mfrc522.uid.uidByte[i], HEX);
-     content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
-     content.concat(String(mfrc522.uid.uidByte[i], HEX));
+    Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
+    Serial.print(mfrc522.uid.uidByte[i], HEX);
+    content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
+    content.concat(String(mfrc522.uid.uidByte[i], HEX));
   }
   Serial.println();
   Serial.print("Message : ");
@@ -223,12 +255,20 @@ void loop()
     noTone(BUZZER);
   }
 }
-</xmp>
-</div>
+</xmp></div></strong>
+  </p>
+  
+  <div class="box">
+   <h2 class="title" id="fritzing-schematic">Schematic</h2>
+<p class= "info">
+Here is a beautiful (and blurry) schematic:
 </p>
-<h2 class="title" id="fritzing-schematic">
-Schematic
-</h2>
-<img class= "middle" src="images/schematic.PNG" alt="Arduino Schematic Created With Fritzing">
-    </body>
+<img class= "middle" src="images/schematic.png" alt="Arduino Schematic Created With Fritzing" width= "60%">
+  </div>
+  <div class="column side">
+    
+  </div>
+</div>
+  
+</body>
 </html>

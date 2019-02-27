@@ -10,7 +10,8 @@
 }
 
 body {
-	margin: 0;
+	margin-left: 10%;
+	margin-right: 10%;
 	font-family: verdana;
 	background-color: #FFE077;
 }
@@ -57,18 +58,14 @@ body {
 
 
 .column.side {
-  width: 25%;
+  width: 30%;
+  margin-top: 500px;
+  float: right;
 }
 
 .column.middle {
-  width: 50%;
+  width: 70%;
   height: 100%;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 @media screen and (max-width: 600px) {
@@ -123,17 +120,12 @@ body {
   <a href="#fritzing-schematic">Schematic</a>
   </strong>
 </div>
-
-<div class="row">
-  <div class="column side">
-<iframe src="https://xfreezi.github.io/ad1.html" height="1200" width="300"></iframe>
-  </div>
   
   <div class="column middle">
   
 	<h1 class="title">Welcome to ....</h1>
         <h2 class="title"> Simon and Kaisen's Arduino page!!</h2>
-		<img class= "middle" src="images/cloud8.png">
+		<img class= "middle" src="images/cloud8.png" width= "100%">
 		<div class="box">
 	 <h1 class="title"> <u> RFID door lock (brief plan) </u></h1>
         <h2 class="heading" id= "home"> Intro:</h2>
@@ -162,7 +154,7 @@ body {
 </ul>
 </div>
 <img class= "image" src="https://www.robomart.com/image/cache/catalog/RM0648/rc522-rfid-rf-ic-card-sensor-module-to-send-s50-fudan-card-rf-module-keychain-for-arduino-raspberry-pi-robotics-arduino-accessories-rm0648-by-robomart-a17060-500x500.jpg">
-<img class= "image" src="https://cdn.instructables.com/FGF/QB07/HX7P7I3J/FGFQB07HX7P7I3J.LARGE.jpg" height= "324">
+<img class= "image" src="https://cdn.instructables.com/FGF/QB07/HX7P7I3J/FGFQB07HX7P7I3J.LARGE.jpg" height= "375">
 
 <div class="box">
 <h2 class="title" id="problem-solved">What problem can it solve?</h2>
@@ -265,9 +257,9 @@ Here is a beautiful (and blurry) schematic:
 </p>
 <img class= "middle" src="images/schematic.png" alt="Arduino Schematic Created With Fritzing" width= "60%">
   </div>
+    </div>
   <div class="column side">
-    
-  </div>
+<iframe src="html/ad1" height="1000" width="200"></iframe>
 </div>
   
 </body>

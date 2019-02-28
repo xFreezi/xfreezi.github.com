@@ -103,7 +103,42 @@ body {
 .image {
 	width: 49.5%;
 }
-	
+
+.iframe {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	overflow: none;
+}
+.poll {
+	padding-top: 50;
+	padding-left: 40;
+	padding-right:40;
+	padding-bottom: 70;
+	background-color: #9FFFF3;
+	color: black;
+	text-align: center;
+}
+.button {
+	padding: 5px 25px;
+	display: inline-block;
+	background-color: #FFE077;
+	color: black;
+	text-align: center;
+	border: none;
+	margin: 4px 2px;
+	font-size: 18px;
+	font-family: impact;
+	 border: 2px solid #FFC400;
+}
+.button:hover {
+	background-color: #FFC400;
+	text-decoration: none;
+}
+a {
+	text-decoration:none;
+}
 </style>
 </head>
 <body>
@@ -160,9 +195,10 @@ body {
 <p>
 <ul class="info">
     <li>Security in your house (kinda like a hotel room)</li>
-    <li>Instead of looking through your keys,  you use a tag or card (convenience)</li></ul>
-<p><li class="info">Imagine this: you go to your friend's house for a sleepover and forget to lock the door. A robber comes and steals your food. Then, you get home, and since you have no food, starve to death. If you had a RFID lock, the robber wouldn't be able to get into your house and you and your food would be fine because our automatic lock locks by itself!</p></li>
+    <li>Instead of looking through your keys,  you use a tag or card (convenience)</li>
+<p><li>Imagine this: you go to your friend's house for a sleepover and forget to lock the door. A robber comes and steals your food. Then, you get home, and since you have no food, starve to death. If you had a RFID lock, the robber wouldn't be able to get into your house and you and your food would be fine because our automatic lock locks by itself!</p></li>
    </div>
+   </ul>
    <img class= "image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxNMYHlg5yz0yEgTsTVD9iK6hONW5NPDoqTgbga2yldP6fyGtdGw"height= "324">
 <img class= "image" src="https://s.globalsources.com/MAGAZINE/SECURITY/1602/IMAGES/AC_1602_SP_AC_NP23.jpg">
 <h2 class="title" id="arduino-code"> 
@@ -259,8 +295,13 @@ Here is a beautiful (and blurry) schematic:
     </div>
   <div class="column side">
   
-	<a href= "https://thatboringblog.com/"><iframe src="https://xfreezi.github.io/ad1.html" height="1000" width="100%"></iframe></a>
-</div>
-  
+	<iframe class= "iframe"src="https://xfreezi.github.io/ad1.html" height="1000" width="100%"><a href= "https://thatboringblog.com/"></a></iframe>
+  <div class= "poll">	
+  <h1>POLL</h1>
+  <h3>What is better?</h3><h2>CATS or DOGS?</h2>
+  <a href= "https://sketchywebsite.net/"><button class= "button"><p>CATS</p></button></a>
+  <a href= "https://sketchywebsite.net/"><button class= "button"><p>DOGS</p></button></a>
+  </div>
+  </div>
 </body>
 </html>

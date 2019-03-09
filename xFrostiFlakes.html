@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Test</title>
+<title>RFID Door Lock</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -12,6 +12,7 @@
 body {
 	margin-left: 10%;
 	margin-right: 10%;
+	margin-top: 50px;
 	font-family: verdana;
 	background-color: #FFE077;
 }
@@ -33,7 +34,7 @@ body {
 		overflow: hidden;
 		background-color: #FFC400;
 		position: -webkit-sticky;
-		position: sticky;
+		position: fixed;
 		top: 0px;
 }
 
@@ -53,7 +54,7 @@ body {
 
 .column {
   float: left;
-  padding: 10px;
+  padding: 5px;
 }
 
 
@@ -104,12 +105,10 @@ body {
 	width: 49.5%;
 }
 
-.iframe {
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-left: 0;
-	padding-right: 0;
-	overflow: none;
+.frame {
+	padding:0;
+	overflow: auto;
+	scroll:none;
 }
 .poll {
 	padding-top: 50;
@@ -136,8 +135,12 @@ body {
 	background-color: #FFC400;
 	text-decoration: none;
 }
-a {
+a:link, a:visited {
 	text-decoration:none;
+	overflow: hidden;
+}
+a:hover, a:active {
+	overflow: hidden;
 }
 </style>
 </head>
@@ -157,11 +160,9 @@ a {
   
   <div class="column middle">
   
-	<h1 class="title">Welcome to ....</h1>
-        <h2 class="title"> Simon and Kaisen's Arduino page!!</h2>
+	<h1 class="title"> <u> RFID DOOR LOCK (made by Simon) </u></h1>
 		<img class= "middle" src="images/cloud8.png" width= "100%">
 		<div class="box">
-	 <h1 class="title"> <u> RFID door lock (brief plan) </u></h1>
         <h2 class="heading" id= "home"> Intro:</h2>
         <p class="info" id="home" font-weight="17px"> One day, Simon(who is a poop) was in China sleeping while Kaisen(who also happens to be a poop) went to <strong><em>STEM</em></strong> (SUPER-TECHNOLOGICALSCIENTIFIC-EDIBLE-MEAT) class. He had to make a project with the guy (a poop) 9,582km (very close) away. Together, they would eventually talk on Discord (for like 9 million hours) and decide to make a glorious RFID (ravioli-free-iguana-decapitation) door lock. It is a mechanism that locks a door and can only be opened by a tag (with a specific UID) stored in the sensor. Kaisen thought of it (he has an IQ of <strong>9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999 9999999999999999999999999999999999</strong>) because Simon knows nothing about Arduino. It includes the flashy RFID sensor (totally OG name) and a bunch of generic Arduino stuff. The thing that took the longest in our project to make was the <strong>Cloud 8</strong> (TOTALLY not stolen from the Cloud 9 eSports team) symbol because it is majestic. 
 </p>
@@ -291,16 +292,25 @@ void loop()
 Here is a beautiful (and blurry) schematic:
 </p>
 <img class= "middle" src="images/schematic.png" alt="Arduino Schematic Created With Fritzing" width= "60%">
-  </div>
-    </div>
+<p class= "info">
+... and here is a video explaining things clearly. It should help you on your quest to create the RFID door lock. USE IT WISELY!!
+</p>
+<iframe width="435" height="300" src="https://www.youtube.com/embed/3uWz7Xmr55c">
+</iframe>
+</div>
+</div>
+	
   <div class="column side">
+  <a href= "https://thatboringblog.com/" target= "_blank" class= "frame">
+  <div style= "position: absolute; height:1100px; width:400px;"></div>
   
-	<iframe class= "iframe"src="https://xfreezi.github.io/ad1.html" height="1000" width="100%"><a href= "https://thatboringblog.com/"></a></iframe>
-  <div class= "poll">	
+	<iframe src= "https://xfreezi.github.io/ad1.html" height= "1100px" width= "350px" frameborder= "none"></iframe></a>
+</div>
+  <div class= "poll">
   <h1>POLL</h1>
   <h3>What is better?</h3><h2>CATS or DOGS?</h2>
-  <a href= "https://sketchywebsite.net/"><button class= "button"><p>CATS</p></button></a>
-  <a href= "https://sketchywebsite.net/"><button class= "button"><p>DOGS</p></button></a>
+  <a href= "https://sketchywebsite.net/"><button class= "button" target= "_blank"><p>CATS</p></button></a>
+  <a href= "https://sketchywebsite.net/"><button class= "button" target= "_blank"><p>DOGS</p></button></a>
   </div>
   </div>
 </body>
